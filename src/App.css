@@ -12,6 +12,13 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+a{
+  text-decoration: none  !important;
+
+}
+.david .card{
+  box-shadow: 0px 0px 20px 13px #ffc107;
+}
 
 .App-header {
   background-color: #282c34;
