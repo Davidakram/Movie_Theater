@@ -9,22 +9,24 @@ import { RemoveFromFav } from '../Store/Actions/Actions';
 function FavouritesItem(props) {
 
 
-    const dispatch=useDispatch()
+  const dispatch = useDispatch()
 
 
-    const Removing=(index)=>{
-        dispatch(RemoveFromFav(index))
-        
-     }
+  const Removing = (index) => {
+    dispatch(RemoveFromFav(index))
+
+  }
 
 
   return (
-    <Card className="position-relative " style={{height:"100%"}}>
-    <Card.Img variant="top" src={props.src} />
-    <Card.Body>
-    <Card.Title>{props.title}</Card.Title>
-    <Button onClick={()=>Removing(props.index)} variant="danger">Remove From Favourites</Button>
-    </Card.Body>
+    <Card className="position-relative " style={{ height: "100%" }}>
+      <Card.Img variant="top" src={props.src} />
+      <Card.Body>
+        <Card.Title>{props.title}</Card.Title>
+        <Link to="/favourites">
+          <Button onClick={() => Removing(props.index)} variant="danger">Remove From Favourites</Button>
+        </Link>
+      </Card.Body>
     </Card>
   );
 }
